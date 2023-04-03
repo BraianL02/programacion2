@@ -13,23 +13,33 @@
 #include <string.h>
 
 int validarEnt(char num[]) {
-    // int i;
-    // for(i=0; i<strlen(num); i++){
-    //     if(!isdigit(num[i])){
-    //         printf("El valor ingresado no es numerico\n");
-    //         return 0;
-    //     } 
-    // }
-    // return 1;
+    int i;
+    if (strlen(num) >= 5){
+        printf("El dato ingresado es demasiado grande \n");
+        return 0;
+    }
+    if (num[0] == '-') {
+        i=1;
+    }
+    else{
+        i=0;
+    }
+    for(; i<strlen(num); i++){
+        if(!isdigit(num[i])){
+            printf("El valor ingresado no es valido\n");
+            return 0;
+        } 
+    }
+    return atoi(num);
 
-//    if (num == (int)num) {
-//       printf("%d es un numero entero.\n", (int)num);
-//    }
-//    else {
-//       printf("%.2f no es un numero entero.\n", num);
-//    }
+   if (num == (int)num) {
+      printf("%d es un numero entero.\n", (int)num);
+   }
+   else {
+      printf("%.2f no es un numero entero.\n", num);
+   }
 
-//    return 0;
+   return 0;
 }
 
 
@@ -46,7 +56,7 @@ int multiplicacion(int n1, int n2)
     if (n2 == 0) {
         return 0;
     }
-
+    // Llamada recursiva
     if (n2 > 0) {
         return n1 + multiplicacion(n1, n2 - 1);
 
@@ -57,23 +67,18 @@ int multiplicacion(int n1, int n2)
 
 int main()
 {   
-    char num1[5], num2[5];
-    int i;
-    int n,m;
+    char num1[99], num2[99];
     int num1V, num2V;
-    do{
+    do {
         printf("Ingrese el primer numero: ");
-        n=scanf("%d",num1);
-    }
-    while (n==0);
-    num1V = atoi(num1);
-    do{
-        printf("Ingrese el multiplicando: ");
-        m=scanf("%d",num2);
-    }
-    while (m==0);
-
-    num2V = atoi(num2);
+        scanf("%s",num1);
+        num1V = validarEnt(num1);
+    } while (num1V == 0);
+    do {
+        printf("Ingrese el segundo numero: ");
+        scanf("%s",num2);
+        num2V = validarEnt(num2);
+    } while (num2V == 0);
     printf("El resultado de multiplicar %d con %d es: %d \n",num1V,num2V,multiplicacion(num1V,num2V));
     
     return 1;}
