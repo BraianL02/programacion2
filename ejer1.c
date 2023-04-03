@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-
+//
 bool palindromo(char *cadena, int inicio, int fin)
 {
     // Cadena con un solo caracter o vacia
