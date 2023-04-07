@@ -1,10 +1,3 @@
-// Dados dos números enteros m y n, construir una función recursiva que devuelva el
-// producto de ambos, calculando el mismo como sumas sucesivas. Esto es:
-// m*n=m+m+...+m, n veces.
-// Ejemplos:
-// producto(5, 3) => 15
-// producto (10, 4) => 40 
-
 #include <stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
