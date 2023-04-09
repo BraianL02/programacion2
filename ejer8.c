@@ -33,6 +33,10 @@ int validarEntPos(char num[]) {
             return 0;
         } 
     }
+    if (atoi(num)==0){
+        printf("El valor debe ser mayor que 0\n");
+            return 0;
+    }
     return 1;
 }
 void print_subconj(int subconj[], int tam) {
