@@ -50,7 +50,7 @@ int main() {
     do{
         printf("Ingrese el valor de N: ");
         scanf("%s",&num1);
-        n1=validarEntPos(num1);
+        n1=validarEntPosP10(num1);
     }
     while(n1==0);
     N=atoi(num1);
@@ -60,6 +60,7 @@ int main() {
         printf("Ingrese el valor de B: ");
         scanf("%s",&num2);
         n2=validarEntPosP10(num2);
+        if (n2==1 && atoi(num2) == 1){printf("El valor de B debe ser mayor que 1\n");n2=0;};
     }
     while(n2==0);
     B=atoi(num2);
