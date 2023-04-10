@@ -25,15 +25,6 @@ int validarEnt(char num[]) {
         } 
     }
     return atoi(num);
-
-   if (num == (int)num) {
-      printf("%d es un numero entero.\n", (int)num);
-   }
-   else {
-      printf("%.2f no es un numero entero.\n", num);
-   }
-
-   return 0;
 }
 
 
