@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "recursividad.h"
 void agregarSeparadorMiles(char* num, int n, int i, int p) {
     if (i >= n) {
         return; // detener la recursión cuando se haya procesado todo el número

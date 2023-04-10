@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include "recursividad.h"
 int validarCadena(char cadena[100]){
     int i;
     int l = strlen(cadena);

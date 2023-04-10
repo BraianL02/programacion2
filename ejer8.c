@@ -2,7 +2,8 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-int validarEnt(char num[]) {
+#include "recursividad.h"
+int validarEntP8(char num[]) {
     int i;
     if (num[0] == '-') {
         i=1;
@@ -18,7 +19,7 @@ int validarEnt(char num[]) {
     }
     return 1;
 }
-int validarEntPos(char num[]) {
+int validarEntPosP8(char num[]) {
     int i;
     if (num[0] == '-') {
         printf("El valor ingresado debe ser positivo\n");
@@ -79,7 +80,7 @@ int main() {
         do{
             printf("Ingrese un valor para el conjunto (o ingrese '0' para terminar): ");
             scanf("%s",&num1);
-            n=validarEnt(num1);
+            n=validarEntP8(num1);
         }while (n==0);
         valor=atoi(num1);
 
@@ -95,7 +96,7 @@ int main() {
     do{
         printf("Ingrese el valor objetivo de la suma: ");
         scanf("%s", &num2);
-        m=validarEntPos(num2);
+        m=validarEntPosP8(num2);
     }while (m==0);
     obj_sum=atoi(num2);
     enctr_subconj(s, tamanio, obj_sum);

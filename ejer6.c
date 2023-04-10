@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include "recursividad.h"
 
 int validarEntPos(char num[]) {
     int i;

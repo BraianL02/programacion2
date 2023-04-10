@@ -2,8 +2,9 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#include "recursividad.h"
 
-int validarNat(char num[],int divisor) {
+int validarNatDiv(char num[],int divisor) {
     int i;
     if (num[0] == '-') {
         i=1;
@@ -79,13 +80,13 @@ int main(){
     do {
         printf("Ingrese el dividendo: ");
         scanf("%s", dato1);
-        validacion1 = validarNat(dato1,0);
+        validacion1 = validarNatDiv(dato1,0);
     } while (validacion1 == 0);
     M = atoi(dato1);
     do {
         printf("Ingrese el divisor: ");
         scanf("%s", dato2);
-        validacion2 = validarNat(dato2,1);
+        validacion2 = validarNatDiv(dato2,1);
     } while (validacion2 == 0);
     N = atoi(dato2);
     signoN=positividad(N);

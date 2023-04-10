@@ -4,6 +4,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+#include "recursividad.h"
 
 int validarEnt(char num[]) {
     int i;

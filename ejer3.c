@@ -4,6 +4,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
+#include "recursividad.h"
 
 int validarNat(char n[]){
     int i,c;

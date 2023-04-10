@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include "recursividad.h"
 
 int divisible_por_7(int n) {
     if (n < 0) {

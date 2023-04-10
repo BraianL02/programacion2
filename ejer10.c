@@ -2,7 +2,8 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
-int validarEntPos(char num[]) {
+#include "recursividad.h"
+int validarEntPosP10(char num[]) {
     int i;
     if (num[0] == '-' || num[0] == '0'){
         printf("El valor ingresado debe ser mayor que cero.\n");
@@ -58,7 +59,7 @@ int main() {
     do{
         printf("Ingrese el valor de B: ");
         scanf("%s",&num2);
-        n2=validarEntPos(num2);
+        n2=validarEntPosP10(num2);
     }
     while(n2==0);
     B=atoi(num2);

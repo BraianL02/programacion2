@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
+#include "recursividad.h"
 //
 bool palindromo(char *cadena, int inicio, int fin)
 {
@@ -34,9 +35,7 @@ int main()
         break;
     }
     }
-    
-    
-
+      
     // Verifica si la cadena es un palindromo
     if (palindromo(cadena, 0, strlen(cadena) - 1))
         {
